@@ -31,6 +31,21 @@ function Pricing() {
             'Maximum context windows',
         ],
         buttonText: 'Get Pro',
+        buttonVariant: 'secondary',
+    };
+
+    const organizationPlan = {
+        title: 'Organization',
+        priceAmount: '$100',
+        pricePeriod: '/mo.',
+        includesText: 'Everything in Pro, plus:',
+        features: [
+            'Extended limits on Agent',
+            'Unlimited Tab completions',
+            'Background Agents',
+            'Maximum context windows',
+        ],
+        buttonText: 'Get Organization',
         buttonVariant: 'primary',
     };
 
@@ -40,9 +55,10 @@ function Pricing() {
             <p className="page-label"><strong>React App</strong> — running with Vite</p>
             <div className="cards-container">
                 {/* The spread operator {...hobbyPlan} passes all object properties as individual props */}
-                {/* This is the same as: title="Hobby" price="Free" includesText="Includes:" etc. */}
+                {/* This is the same as: title="Hobby" priceAmount="Free" pricePeriod=null includesText="Includes:" etc. */}
                 <PricingCard {...hobbyPlan} />
                 <PricingCard {...proPlan} />
+                <PricingCard {...organizationPlan} />
             </div>
         </>
     );
