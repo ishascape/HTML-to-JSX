@@ -1,27 +1,45 @@
 <!DOCTYPE html>
+<!-- HTML5 doctype: enables modern standards mode in the browser. -->
 <html lang="en">
+<!-- Root element: defines the document language for accessibility/screen readers. -->
 <head>
+    <!-- Character encoding: lets the browser render text correctly. -->
     <meta charset="UTF-8">
+    <!-- Viewport: makes layout scale appropriately on mobile devices. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in the browser tab. -->
     <title>Pricing Plans — HTML version</title>
+    <!-- Preconnect: reduce font stylesheet load time by warming the connection. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Font import: Inter family with weights used by the design. -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Local stylesheet: all layout/typography/button styling lives here. -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Small fixed badge to indicate this page’s layout variant. -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+    <!-- Horizontal row holding the three pricing tiers (styled in CSS). -->
     <div class="cards-container">
+        <!-- Pricing card: Hobby (uses the light “secondary” CTA button). -->
         <div class="card">
+            <!-- Top portion of card: title, price, and feature list. -->
             <div class="card-top">
+                <!-- Plan name. -->
                 <h3 class="card-title">Hobby</h3>
+                <!-- Price block: amount plus optional period (not needed for Free). -->
                 <p class="card-price">
                     <span class="card-price-amount">Free</span>
                 </p>
+                <!-- Feature list section for this tier. -->
                 <div class="card-content">
+                    <!-- Label above the bullet list. -->
                     <p class="includes-text">Includes:</p>
+                    <!-- Custom “no-bullets” list; checkmark is rendered by a span. -->
                     <ul class="features-list">
                         <li>
+                            <!-- Checkmark glyph for each feature row. -->
                             <span class="checkmark">✓</span>
                             No credit card required
                         </li>
@@ -36,15 +54,19 @@
                     </ul>
                 </div>
             </div>
+            <!-- Bottom CTA: positioned to the bottom via card flex layout. -->
             <button class="download-button secondary">Download</button>
         </div>
+        <!-- Pricing card: Pro (uses the light “secondary” CTA button). -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
+                <!-- Price block: amount + “/mo.” in the same line. -->
                 <p class="card-price">
                     <span class="card-price-amount">$20</span>
                     <span class="card-price-period">/mo.</span>
                 </p>
+                <!-- Feature list section for this tier. -->
                 <div class="card-content">
                     <p class="includes-text">Everything in Hobby, plus:</p>
                     <ul class="features-list">
@@ -69,6 +91,7 @@
             </div>
             <button class="download-button secondary">Get Pro</button>
         </div>
+        <!-- Pricing card: Organization (uses the dark “primary” CTA button). -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Organization</h3>
@@ -98,6 +121,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- Primary CTA: dark fill for emphasis on the top tier. -->
             <button class="download-button primary">Get Organization</button>
         </div>
         

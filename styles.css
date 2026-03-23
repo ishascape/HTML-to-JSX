@@ -1,9 +1,14 @@
+/* ===============================
+   Global reset
+   Prevents browser default spacing and keeps box math consistent.
+   =============================== */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Includes padding/border in width/height calculations. */
 }
 
+/* Page shell: centers the pricing row and applies the base typography/background. */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +19,7 @@ body {
     padding: 20px;
 }
 
+/* Row layout for the three pricing tiers. */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +29,7 @@ body {
     align-items: flex-start;
 }
 
+/* Pricing card: column layout so the CTA can stick to the bottom. */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +41,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Card top: stacks title, price, and feature list. */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name (Hobby / Pro / Organization). */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +56,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row: amount + optional “/mo.” aligned on a baseline. */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +64,38 @@ body {
     align-items: baseline;
 }
 
+/* Numeric price amount (or “Free”). */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period label (e.g., /mo.). */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Spacing under the feature list to make room for the CTA. */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* “Includes:” / “Everything in … plus:” label above the checklist. */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list: removes default bullets so each row can be custom-styled. */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Each feature row: checkmark + text, with vertical spacing between items. */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +104,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark glyph styling. */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,8 +112,9 @@ body {
     font-weight: 400;
 }
 
+/* Pill button base. The CTA variants are applied via extra classes. */
 .download-button {
-    margin-top: auto;
+    margin-top: auto; /* Pushes the button to the bottom of equal-height cards. */
     width: fit-content;
     background-color: #e6e5e0;
     border: none;
@@ -106,44 +124,53 @@ body {
     font-weight: 500;
     color: #333;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease; /* Smooth hover/active interaction. */
 }
 
+/* Hover state for the secondary (light) button. */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
+/* Active state matches hover for a consistent pressed look. */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* Primary variant: dark fill + white text. */
 .download-button.primary {
     background-color: #111;
     color: #fff;
 }
 
+/* Primary hover: lighten the dark fill. */
 .download-button.primary:hover {
     background-color: #333;
 }
 
+/* Primary active: keep the hover color. */
 .download-button.primary:active {
     background-color: #333;
 }
+/* Outline variant: transparent background + dark border/text. */
 .download-button.outline {
     background-color: transparent;
     border: 1px solid #111;
     color: #111;
 }
 
+/* Outline hover: fill the background and invert text to white. */
 .download-button.outline:hover {
     background-color: #111;
     color: #fff;
 }
 
+/* Outline active: keep the filled hover look. */
 .download-button.outline:active {
     background-color: #111;
     color: #fff;
 }
+/* Page label badge fixed to the top center (helps compare layout versions). */
 .page-label {
     position: fixed;
     top: 16px;
@@ -157,6 +184,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Strong text inside the badge: darker for readability. */
 .page-label strong {
     color: #333;
 }
